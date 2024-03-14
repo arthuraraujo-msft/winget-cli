@@ -341,3 +341,5 @@ src/PowerShell/Microsoft.WinGet.Client/Crescendo/*.psm1
 
 # Dev PowerShell module path
 src/PowerShell/scripts/Module
+
+src/vcpkg_installed
