@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    "sfs-client"
+  ],
+  "vcpkg-configuration": {
+    "overlay-ports": [
+      "../vcpkg-custom-ports"
+    ]
+  }
+}
