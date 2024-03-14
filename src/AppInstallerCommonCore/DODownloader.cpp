@@ -10,6 +10,8 @@
 // TODO: Get this from the Windows SDK when available
 #include "external/do.h"
 
+#include <sfsclient/SFSClient.h>
+
 namespace AppInstaller::Utility
 {
     namespace DeliveryOptimization
@@ -162,6 +164,10 @@ namespace AppInstaller::Utility
 
             void Start()
             {
+                SFS::ClientConfig config;
+                std::unique_ptr<SFS::SFSClient> client;
+                auto result = SFS::SFSClient::Make(config, client);
+
                 DO_DOWNLOAD_RANGES_INFO emptyRanges{};
                 emptyRanges.RangeCount = 0;
                 THROW_IF_FAILED(m_download->Start(&emptyRanges));
